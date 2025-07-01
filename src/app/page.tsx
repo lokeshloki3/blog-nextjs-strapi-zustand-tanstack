@@ -9,18 +9,18 @@ export default function Home() {
     return await response.json();
   }
 
-  const query = useQuery({
+  const { data, isLoading, error } = useQuery({
     queryKey: ['blogs'],
     queryFn: getBlogs,
   })
 
   return (
     <div>
-      {query.isLoading && <p>Loading...</p>}
-      {query.error && <p>Error: {query.error.message}</p>}
-      {query.data && (
+      {isLoading && <p>Loading...</p>}
+      {error && <p>Error: {error.message}</p>}
+      {data && (
         <div>
-          {query.data.data.map((item: any) => (
+          {data.data.map((item: any) => (
             <div key={item.id}>
               <h1>{item.Title}</h1>
             </div>
