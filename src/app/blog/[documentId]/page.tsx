@@ -35,18 +35,19 @@ const Page = ({ params }: { params: Promise<{ documentId: string }> }) => {
   const imgUrl = blog?.img?.url ? `http://127.0.0.1:1337${blog.img.url}` : '';
 
   return (
-    <div className='w-full mx-auto p-4'>
+    <div className='w-[80%] mx-auto p-4'>
       <Link href="/">
-        <div className='bg-amber-400 text-white px-4 py-2 rounded w-fit'>Back</div>
+        <div className='bg-amber-800 text-white px-4 py-2 rounded w-fit'>Back</div>
       </Link>
 
-      <div className='relative w-full h-96 overflow-hidden rounded-lg mt-5'>
+      <div className='relative h-96 overflow-hidden rounded-lg mt-5'>
         {imgUrl && (
           <Image
             src={imgUrl}
             alt={blog?.img?.name || blog?.Title}
-            fill
-            className='rounded-t-lg object-cover'
+            height={612}
+            width={469}
+            className='rounded-lg mx-auto'
           />
         )}
       </div>

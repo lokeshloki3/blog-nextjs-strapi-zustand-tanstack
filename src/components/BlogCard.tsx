@@ -16,7 +16,7 @@ const BlogCard = ({ blog }: any) => {
             src={imgUrl}
             alt={blog.img.name || blog.Title}
             fill
-            className='rounded-t-lg object-cover'
+            className='rounded-lg object-cover'
           />
         </div>
         <div className='p-2'>
@@ -25,7 +25,7 @@ const BlogCard = ({ blog }: any) => {
           </h2>
         </div>
       </Link>
-      <p className='text-gray-600'>{TruncateBlogDesc}</p>
+      <p className='text-white'>{TruncateBlogDesc}</p>
 
     </div>
   );

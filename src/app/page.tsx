@@ -61,8 +61,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center p-10 gap-10">
-      <Categories data={categoriesData} />
-      <Blogs data={blogsData} />
+      <Categories categories={categoriesData?.data || []} />
+      <Blogs blogs={blogsData} />
     </div>
   );
 }
