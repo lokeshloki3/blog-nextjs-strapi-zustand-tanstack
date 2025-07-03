@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 
 export default function Home() {
   const getCategories = async () => {
-    const response = await fetch("http://127.0.0.1:1337/api/categories", {
+    const response = await fetch("http://127.0.0.1:1337/api/categories", {    // options
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
       },
@@ -61,6 +61,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center p-10 gap-10">
+      <h1>List of Blogs</h1>
       <Categories categories={categoriesData?.data || []} />
       <Blogs blogs={blogsData} />
     </div>

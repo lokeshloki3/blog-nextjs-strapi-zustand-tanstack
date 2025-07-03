@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import BlogCard from './BlogCard';
 import { BlogType } from '@/types';
@@ -11,7 +9,7 @@ const Blogs = ({ blogs }: { blogs: BlogType[] }) => {
   const filteredBlogs = category === 'All'
     ? blogs
     : blogs.filter((blog) =>
-      blog.categories?.some((cat: any) => cat.Title === category)
+      blog.categories?.some((cat) => cat.Title === category)
     );
 
   return (

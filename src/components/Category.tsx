@@ -1,5 +1,3 @@
-'use client';
-
 import useCategoryStore from '@/store/useCategoryStore';
 import { CategoryType } from '@/types';
 import React from 'react';
